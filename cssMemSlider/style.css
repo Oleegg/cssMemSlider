@@ -9,10 +9,11 @@ body{
 input{
     visibility: hidden;
 }
-.wrapper{
-    max-width: 75rem;
-    overflow: hidden;
+
+main{      
     margin: 0 auto;
+    max-width: 75rem;
+    overflow: hidden;  
 }
 .slider{
 display: flex;
@@ -31,6 +32,8 @@ margin: 2% auto;
     z-index: 10;
 }
 footer{
+    margin: 0 auto;
+    max-width: 75rem;
     display: flex;
     justify-content: space-between;
     height: 1.5rem;
@@ -64,19 +67,19 @@ gap: .5rem;
     align-items: center;
 }
 
-#sl1:checked ~ .slider{
+#sl1:checked ~ main > .slider{
     transform: translateX(0);
     transition: .5s;
 }
-#sl2:checked ~ .slider {
+#sl2:checked ~ main > .slider {
     transform: translateX(-25%);
     transition: .5s;
 }
-#sl3:checked ~ .slider {
+#sl3:checked ~ main > .slider {
     transform: translateX(-50%);
     transition: .5s;
 }
-#sl4:checked ~ .slider {
+#sl4:checked ~ main > .slider {
     transform: translateX(-75%);
     transition: .5s;
 }
@@ -98,7 +101,7 @@ gap: .5rem;
 }.circle-wrapp{
     width: 1.3rem;
     height: 1.3rem;
-    background-color: #777;
+    background-color: rgb(119, 119, 119);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -150,7 +153,15 @@ gap: .5rem;
     .text div{
         font-size: 1rem;
     }
-}@media(max-width: 800px){
+}
+
+@media(max-width: 800px){
+    main{
+        height: 80vw;
+    }
+    .slide{
+        height: 85vw;
+    }
     footer{
         height: 2.1rem;
     }
@@ -158,4 +169,59 @@ gap: .5rem;
         font-size: 1rem;
         margin-bottom: 1.3rem;
     }    
+
+}
+@media(max-height: 600px){    
+    main{
+        height: 80vh;
+    }
+}
+@media(max-width: 500px){
+    main{
+        margin-bottom: 1rem;
+    }
+    .slider{
+        margin-top: 0;
+    }
+    footer{
+        flex-direction: column;
+        height: 7rem;
+        justify-content: space-around;
+        gap: 1rem;
+    }
+    .text{
+        display: flex;
+        order: 4;
+        height: 4rem;
+        overflow: hidden;
+    }
+    .text div{
+        padding: 0 .4rem;
+        height: 2rem;
+        width: 100%;
+        overflow-wrap: break-word;
+    }
+    .controls{
+        order: 1;        
+    }
+    #sl1:checked ~ footer > .text{
+        transform: translateY(0);
+        transform: translateX(38%);
+        transition: .5s;
+    }
+    #sl2:checked ~ footer > .text{
+        transform: translateY(0);
+        transform: translateX(12.7%);
+        transition: .5s;
+    }
+    #sl3:checked ~ footer > .text{
+        transform: translateY(0);
+        transform: translateX(-12%);
+        transition: .5s;
+    }
+    #sl4:checked ~ footer > .text{
+        transform: translateY(0);
+        transform: translateX(-38%);
+        transition: .5s;
+    }
 }
