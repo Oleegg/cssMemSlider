@@ -60,11 +60,13 @@ gap: .5rem;
 }
 .lab1,.lab2,.lab3,.lab4{
     cursor: pointer;
-    width: 1.8rem;
-    height: 1.8rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
 #sl1:checked ~ main > .slider{
@@ -126,28 +128,54 @@ gap: .5rem;
     background-color: #fff;  
 }
 .lab1:hover  .circle-wrapp{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);    
+    cursor: pointer;
 }
 .lab1:hover  .circle-wrapp > .circle{
     background-color: rgb(180, 180, 180);
+    cursor: pointer;
 }
 .lab2:hover  .circle-wrapp{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);cursor: pointer;
 }
 .lab2:hover  .circle-wrapp > .circle{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);cursor: pointer;
 }
 .lab3:hover  .circle-wrapp{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);cursor: pointer;
 }
 .lab3:hover  .circle-wrapp > .circle{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);cursor: pointer;
 }
 .lab4:hover  .circle-wrapp{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);cursor: pointer;
 }
 .lab4:hover  .circle-wrapp > .circle{
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(180, 180, 180);cursor: pointer;
+}
+.lab1:active  .circle-wrapp{
+    background-color: rgb(75, 75, 75);cursor: pointer;
+}
+.lab1:active  .circle-wrapp > .circle{
+    background-color: rgb(75, 75, 75);cursor: pointer;
+}
+.lab2:active  .circle-wrapp{
+    background-color: rgb(75, 75, 75);cursor: pointer;
+}
+.lab2:active  .circle-wrapp > .circle{
+    background-color: rgb(75, 75, 75);cursor: pointer;
+}
+.lab3:active  .circle-wrapp{
+    background-color: rgb(75, 75, 75);cursor: pointer;
+}
+.lab3:active  .circle-wrapp > .circle{
+    background-color: rgb(75, 75, 75);cursor: pointer;
+}
+.lab4:active  .circle-wrapp{
+    background-color: rgb(75, 75, 75);cursor: pointer;
+}
+.lab4:active  .circle-wrapp > .circle{
+    background-color: rgb(75, 75, 75);cursor: pointer;
 }
 @media(max-width:1000px){
     .text div{
@@ -171,15 +199,18 @@ gap: .5rem;
     }    
 
 }
-@media(max-height: 600px){    
+@media(max-height: 670px){    
+    main{
+        height: 85vh;
+    }
+}
+@media(max-height: 400px){
     main{
         height: 80vh;
     }
 }
+
 @media(max-width: 500px){
-    main{
-        margin-bottom: 1rem;
-    }
     .slider{
         margin-top: 0;
     }
@@ -223,5 +254,20 @@ gap: .5rem;
         transform: translateY(0);
         transform: translateX(-38%);
         transition: .5s;
+    }
+    main{
+        height: 60vh;
+        margin-bottom: 1rem;
+    }
+    .slider div{
+        height: 60vh;
+    }
+}
+@media (max-width:500px) and (max-height:600px){
+    main{
+        height: 60vh;
+    }
+    .slider div{
+        height: 60vh;
     }
 }
